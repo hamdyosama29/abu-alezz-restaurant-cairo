@@ -1,18 +1,38 @@
 {
   "categories": [
-    { "id": "shawarma", "name_ar": "الشاورما السورية", "icon": "🥙" },
-    { "id": "grills", "name_ar": "المشويات على الفحم", "icon": "🥩" },
-    { "id": "broasted", "name_ar": "وجبات البروستد المقرمش", "icon": "🍗" },
-    { "id": "manaqish", "name_ar": "المناقيش والفتات", "icon": "🫓" },
-    { "id": "appetizers", "name_ar": "المقبلات والسلطات", "icon": "🥗" }
+    {
+      "id": "shawarma",
+      "name_ar": "الشاورما السورية",
+      "icon": "🥙"
+    },
+    {
+      "id": "grills",
+      "name_ar": "المشويات على الفحم",
+      "icon": "🥩"
+    },
+    {
+      "id": "broasted",
+      "name_ar": "وجبات البروستد المقرمش",
+      "icon": "🍗"
+    },
+    {
+      "id": "manaqish",
+      "name_ar": "المناقيش والفتات",
+      "icon": "🫓"
+    },
+    {
+      "id": "appetizers",
+      "name_ar": "المقبلات والسلطات",
+      "icon": "🥗"
+    }
   ],
   "items": [
     {
       "id": "shw-01",
       "name_ar": "ساندوتش شاورما فراخ سوري سوبر",
       "category": "shawarma",
-      "description": "شاورما فراخ بتتبيلة أبو العز الخاصة، ثومية سورية فاخرة، مخلل خيار في خبز الصاج المحمص.",
-      "price": 95,
+      "description": "شاورما فراخ بتتبيلة أبو العز الخاصة، ثومية سورية فاخرة، مخلل خيار في خبز الصاج المحمص. (محدث عبر CMS)",
+      "price": 100,
       "original_price": 110,
       "image": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80",
       "is_featured": true,
