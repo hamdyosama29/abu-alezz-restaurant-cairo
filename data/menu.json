@@ -1,0 +1,107 @@
+{
+  "categories": [
+    { "id": "shawarma", "name_ar": "الشاورما السورية", "icon": "🥙" },
+    { "id": "grills", "name_ar": "المشويات على الفحم", "icon": "🥩" },
+    { "id": "broasted", "name_ar": "وجبات البروستد المقرمش", "icon": "🍗" },
+    { "id": "manaqish", "name_ar": "المناقيش والفتات", "icon": "🫓" },
+    { "id": "appetizers", "name_ar": "المقبلات والسلطات", "icon": "🥗" }
+  ],
+  "items": [
+    {
+      "id": "shw-01",
+      "name_ar": "ساندوتش شاورما فراخ سوري سوبر",
+      "category": "shawarma",
+      "description": "شاورما فراخ بتتبيلة أبو العز الخاصة، ثومية سورية فاخرة، مخلل خيار في خبز الصاج المحمص.",
+      "price": 95,
+      "original_price": 110,
+      "image": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80",
+      "is_featured": true,
+      "is_available": true,
+      "badge": "الأكثر طلباً"
+    },
+    {
+      "id": "shw-02",
+      "name_ar": "ساندوتش شاورما لحم بلدي دبل",
+      "category": "shawarma",
+      "description": "شاورما لحم عجل بلدي طازج، طحينة شامية، بقدونس، بصل وسماق في خبز صاج مقرمش.",
+      "price": 135,
+      "original_price": 150,
+      "image": "https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=800&q=80",
+      "is_featured": true,
+      "is_available": true,
+      "badge": "لحم بلدي طازج"
+    },
+    {
+      "id": "shw-03",
+      "name_ar": "وجبة شاورما عربي دبل ميكس",
+      "category": "shawarma",
+      "description": "ساندوتش شاورما مقطع عربي، بطاطس فارم فريتس، ثومية، مخلل مشكل وصوص حار.",
+      "price": 180,
+      "original_price": 200,
+      "image": "https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=800&q=80",
+      "is_featured": true,
+      "is_available": true,
+      "badge": "وجبة التوفير"
+    },
+    {
+      "id": "grl-01",
+      "name_ar": "كيلو كباب وكفتة مشكل على الفحم",
+      "category": "grills",
+      "description": "مشكل كباب ضاني وكفتة حلبة متبلة على الفحم، يقدم مع أرز بسمتي بالمكسرات، ثومية، وطحينة.",
+      "price": 580,
+      "original_price": 640,
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80",
+      "is_featured": true,
+      "is_available": true,
+      "badge": "مميز للعائلات"
+    },
+    {
+      "id": "grl-02",
+      "name_ar": "شيش طاووق سوري فاخر",
+      "category": "grills",
+      "description": "أوراك دجاج متبلة بخلطة اللبن والزعتر الجبلي، مشوية على الفحم مع خضار مشوي وأرز.",
+      "price": 220,
+      "original_price": 240,
+      "image": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80",
+      "is_featured": false,
+      "is_available": true,
+      "badge": null
+    },
+    {
+      "id": "brs-01",
+      "name_ar": "وجبة بروستد 4 قطع مقرمش (حار / عادي)",
+      "category": "broasted",
+      "description": "دجاج طازج متبل بالخلطة السرية ومقلي بضغط حراري، بطاطس، ثومية، كول سلو، وخبز كيزر.",
+      "price": 210,
+      "original_price": 230,
+      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+      "is_featured": true,
+      "is_available": true,
+      "badge": "مقرمش ولذيذ"
+    },
+    {
+      "id": "mnq-01",
+      "name_ar": "فتة شاورما فراخ أبو العز بالمكسرات",
+      "category": "manaqish",
+      "description": "أرز بسمتي ذهبي، عيش شامي محمص، شاورما فراخ وفيرة، ثومية، ولوز محمص.",
+      "price": 165,
+      "original_price": 185,
+      "image": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=800&q=80",
+      "is_featured": true,
+      "is_available": true,
+      "badge": "الأكثر شعبية"
+    },
+    {
+      "id": "app-01",
+      "name_ar": "ميكس مقبلات شامية (كبة + سمبوسك + يلنجي)",
+      "category": "appetizers",
+      "description": "3 قطع كبة مقلية لحم ومكسرات، 3 قطع سمبوسك جبنة حلوم، ورق عنب بدبس الرمان.",
+      "price": 120,
+      "original_price": 140,
+      "image": "https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=800&q=80",
+      "is_featured": false,
+      "is_available": true,
+      "badge": null
+    }
+  ]
+}

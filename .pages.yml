@@ -1,0 +1,89 @@
+# Pages CMS Configuration - Abu Al-Ezz Al-Soury Restaurant
+# Architecture: Git-based Headless CMS via GitHub + Vercel
+
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: business
+    label: بيانات وهوية المطعم
+    type: file
+    path: data/business.json
+    fields:
+      - { name: name_ar, label: اسم المطعم بالعربية, type: string }
+      - { name: name_en, label: اسم المطعم بالإنجليزية, type: string }
+      - { name: tagline, label: الشعار اللفظي, type: string }
+      - { name: established, label: سنة التأسيس, type: string }
+      - name: contact
+        label: أرقام التواصل والطلبات
+        type: object
+        fields:
+          - { name: hotline, label: الخط الساخن, type: string }
+          - { name: phone, label: رقم الموبايل الرئيسي, type: string }
+          - { name: phone_alt, label: رقم الموبايل الإضافي, type: string }
+          - { name: whatsapp, label: رقم الواتساب المعتمد للطلبات (صيغة دولية), type: string }
+      - name: location
+        label: العنوان والموقع الجغرافي
+        type: object
+        fields:
+          - { name: governorate, label: المحافظة, type: string }
+          - { name: district, label: الحي / المنطقة, type: string }
+          - { name: address_ar, label: العنوان التفصيلي (عربي), type: string }
+          - { name: address_en, label: العنوان التفصيلي (إنجليزي), type: string }
+          - { name: google_maps_url, label: رابط خرائط جوجل, type: string }
+      - name: hours
+        label: مواعيد العمل والتوصيل
+        type: object
+        fields:
+          - { name: days, label: أيام العمل, type: string }
+          - { name: times, label: ساعات العمل, type: string }
+          - { name: delivery, label: مواعيد خدمة التوصيل, type: string }
+      - name: features
+        label: مميزات المطعم ونقاط القوة
+        type: list
+        field: { name: feature, label: الميزة, type: string }
+
+  - name: menu
+    label: قائمة الطعام والأطباق (Menu)
+    type: file
+    path: data/menu.json
+    fields:
+      - name: categories
+        label: أقسام القائمة الرئيسية
+        type: list
+        fields:
+          - { name: id, label: معرّف القسم (بالإنجليزي), type: string }
+          - { name: name_ar, label: اسم القسم بالعربي, type: string }
+          - { name: icon, label: أيقونة أو إيموجي القسم, type: string }
+      - name: items
+        label: الوجبات والأطباق
+        type: list
+        fields:
+          - { name: id, label: معرّف الوجبة, type: string }
+          - { name: name_ar, label: اسم الوجبة, type: string }
+          - { name: category, label: تصنيف القسم, type: string }
+          - { name: description, label: المكونات والوصف, type: text }
+          - { name: price, label: السعر الحالي (جنيه مصري), type: number }
+          - { name: original_price, label: السعر قبل الخصم (اختياري), type: number }
+          - { name: image, label: صورة الطبق, type: image }
+          - { name: badge, label: شارة مميزة (مثل: الأكثر طلباً), type: string }
+          - { name: is_featured, label: عرض في الأطباق المميزة بالرئيسية, type: boolean }
+          - { name: is_available, label: متوفر للطلب حالياً, type: boolean }
+
+  - name: offers
+    label: العروض الخاصة والتوفير (Offers)
+    type: file
+    path: data/offers.json
+    fields:
+      - name: offers
+        label: قائمة العروض الترويجية
+        type: list
+        fields:
+          - { name: id, label: معرّف العرض, type: string }
+          - { name: title_ar, label: عنوان العرض, type: string }
+          - { name: discount, label: قيمة التوفير (مثال: وفر 75 جنيه), type: string }
+          - { name: price, label: السعر بالعرض (جنيه), type: number }
+          - { name: original_price, label: السعر الأصلي (جنيه), type: number }
+          - { name: badge, label: شارة العرض, type: string }
+          - { name: description, label: تفاصيل ومكونات العرض, type: text }

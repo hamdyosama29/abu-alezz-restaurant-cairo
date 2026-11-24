@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم أبو العز السوري — مدينة نصر | أصل المشاوي والشاورما الشامية</title>
+    <meta name="description" content="الموقع الرسمي لمطعم أبو العز السوري في مدينة نصر، القاهرة. شاورما على الفحم، مشويات حلبية فاخرة، ووجبات بروستد مقرمشة. اطلب مباشرة عبر الواتساب.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0a0d14;
+            --bg-surface: #121824;
+            --bg-surface-elevated: #1a2232;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-accent: rgba(245, 158, 11, 0.3);
+            --accent: #f59e0b;
+            --accent-hover: #d97706;
+            --accent-glow: rgba(245, 158, 11, 0.2);
+            --success: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-full: 9999px;
+            --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(217, 119, 6, 0.05) 0%, transparent 40%);
+        }
+
+        /* Top Notice Banner */
+        .demo-notice {
+            background: rgba(245, 158, 11, 0.1);
+            border-bottom: 1px solid var(--border-accent);
+            padding: 8px 16px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #fcd34d;
+            letter-spacing: 0.3px;
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 13, 20, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, #f59e0b, #b45309);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .brand-sub {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hotline-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .hotline-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .cart-trigger-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: var(--accent);
+            color: #000;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .cart-trigger-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px 40px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid var(--border-accent);
+            border-radius: var(--radius-full);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 900;
+            line-height: 1.18;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #fef08a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 580px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .btn-primary {
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #0a0d14;
+            font-weight: 800;
+            font-size: 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(245, 158, 11, 0.5);
+        }
+
+        .btn-secondary {
+            padding: 14px 28px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-surface-elevated);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-metrics {
+            display: flex;
+            gap: 28px;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 24px;
+        }
+
+        .metric-item h4 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .metric-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* Hero Visual Showcase */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .hero-card-content {
+            padding: 24px;
+            background: linear-gradient(180deg, transparent 0%, rgba(18, 24, 36, 0.95) 40%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .floating-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(10, 13, 20, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-subtle);
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #fcd34d;
+        }
+
+        /* Interactive Menu Section */
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 36px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            padding: 10px 22px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            border-radius: var(--radius-full);
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        .menu-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .menu-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-accent);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img-wrap {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .menu-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .item-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--accent);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 14px;
+        }
+
+        .price-wrap {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .price-curr {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .price-orig {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-decoration: line-through;
+        }
+
+        .add-cart-btn {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid var(--border-accent);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-cart-btn:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        /* Floating WhatsApp Cart Drawer */
+        .cart-bar {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(18, 24, 36, 0.95);
+            border: 1px solid var(--border-accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(16px);
+            padding: 14px 28px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            z-index: 1000;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .cart-bar.active {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .cart-summary {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cart-count-badge {
+            background: var(--accent);
+            color: #000;
+            font-weight: 800;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .cart-total-text {
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .whatsapp-order-btn {
+            background: #25d366;
+            color: #000;
+            padding: 10px 22px;
+            border-radius: var(--radius-full);
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-order-btn:hover {
+            background: #1eb954;
+            transform: scale(1.03);
+        }
+
+        /* Location Section */
+        .location-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 24px;
+        }
+
+        .location-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .branch-info h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .branch-meta {
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 24px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; padding-top: 30px; }
+            .location-card { grid-template-columns: 1fr; padding: 24px; }
+            .cart-bar { width: 90%; justify-content: space-between; padding: 12px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Demo Disclaimer -->
+    <div class="demo-notice">
+        ⚡ هذا الموقع نموذج وتصور رقمي احترافي مقترح من <strong>Egypt Business Agency</strong> لمطعم أبو العز السوري — مدينة نصر.
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <div class="brand-badge">🥙</div>
+                <div>
+                    <div class="brand-title">أبو العز السوري</div>
+                    <div class="brand-sub">مدينة نصر • Abbas El Akkad</div>
+                </div>
+            </a>
+            <div class="nav-actions">
+                <a href="tel:15250" class="hotline-btn">
+                    <span>📞</span> 15250
+                </a>
+                <button class="cart-trigger-btn" onclick="openWhatsAppDirect()">
+                    <span>💬</span> اطلب واتساب
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                ★ طعم الشام الأصلي • شاورما ومشويات على الفحم
+            </div>
+            <h1>شاورما ومشويات سورية <span>على أصولها</span> في قلب مدينة نصر</h1>
+            <p>
+                نقدم لكم أشهى وصفات المطبخ السوري العريق، شاورما الفحم المحمصة بخبز الصاج الطازج، والمشويات الحلبية باللحم البلدي، ووجبات البروستد المقرمشة بأعلى معايير الجودة.
+            </p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn-primary">
+                    <span>🍽️</span> تصفح القائمة الكاملة
+                </a>
+                <a href="https://wa.me/201144435111?text=مرحبا،%20أود%20الاستفسار%20عن%20عروض%20أبو%20العز%20السوري" target="_blank" class="btn-secondary">
+                    <span>💬</span> محادثة مباشرة
+                </a>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-item">
+                    <h4>100%</h4>
+                    <p>لحوم ودواجن بلدية طازجة</p>
+                </div>
+                <div class="metric-item">
+                    <h4>15250</h4>
+                    <p>الخط الساخن لخدمة التوصيل</p>
+                </div>
+                <div class="metric-item">
+                    <h4>0% عمولة</h4>
+                    <p>توفير مباشر عند الطلب عبر الموقع</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <div class="floating-tag">⭐ الطبق الأكثر شهرة في عباس العقاد</div>
+                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80" alt="شاورما أبو العز السوري">
+                <div class="hero-card-content">
+                    <h3 style="font-size: 1.3rem; font-weight: 800;">فتة وشاورما أبو العز الشامية</h3>
+                    <p style="font-size: 0.85rem; color: #cbd5e1;">شاورما غنية بالثومية والمخلل مع أرز بسمتي ذهبي ومكسرات محمصة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" style="padding: 60px 0;">
+        <div class="section-header">
+            <h2>قائمة الأطباق والمأكولات</h2>
+            <p>اختر ما تشتهي من أطباقنا الطازجة وأضفها لسلة الواتساب للطلب المباشر</p>
+        </div>
+
+        <div class="category-tabs" id="categoryTabs">
+            <button class="tab-btn active" onclick="filterCategory('all', this)">جميع الأطباق</button>
+            <button class="tab-btn" onclick="filterCategory('shawarma', this)">🥙 الشاورما السورية</button>
+            <button class="tab-btn" onclick="filterCategory('grills', this)">🥩 المشويات على الفحم</button>
+            <button class="tab-btn" onclick="filterCategory('broasted', this)">🍗 البروستد المقرمش</button>
+            <button class="tab-btn" onclick="filterCategory('manaqish', this)">🫓 الفتات والمناقيش</button>
+            <button class="tab-btn" onclick="filterCategory('appetizers', this)">🥗 المقبلات الشامية</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Dynamic Items Injected by JS from data/menu.json -->
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section style="background: var(--bg-surface); padding: 70px 24px; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+        <div class="section-header">
+            <h2>عروض التوفير الأسبوعية</h2>
+            <p>وجبات عائلية وتشكيلات متكاملة بأسعار مميزة توفر عليك الكثير</p>
+        </div>
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+            <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 30px;">
+                <span style="background: var(--accent); color: #000; font-size: 0.8rem; font-weight: 800; padding: 4px 12px; border-radius: var(--radius-full);">عرض اللمة العائلي</span>
+                <h3 style="font-size: 1.4rem; font-weight: 800; margin: 16px 0 8px;">وجبة اللمة لـ 4 أفراد</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">2 ساندوتش شاورما فراخ سوبر + 2 ساندوتش شاورما لحم دبل + طبق بطاطس عائلي + 1 لتر بيبسي + ثومية وطحينة.</p>
+                <div style="display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+                    <div>
+                        <span style="font-size: 1.6rem; font-weight: 800; color: var(--accent);">380 ج.م</span>
+                        <span style="color: var(--text-dim); text-decoration: line-through; margin-right: 8px;">455 ج.م</span>
+                    </div>
+                    <button class="btn-primary" style="padding: 8px 18px; font-size: 0.85rem;" onclick="addQuickOffer('عرض اللمة العائلي', 380)">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px;">
+                <span style="background: rgba(255, 255, 255, 0.1); color: var(--text-main); font-size: 0.8rem; font-weight: 800; padding: 4px 12px; border-radius: var(--radius-full);">كومبو التوفير الفردي</span>
+                <h3 style="font-size: 1.4rem; font-weight: 800; margin: 16px 0 8px;">كومبو شاورما سوبر وجبة سريعة</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">ساندوتش شاورما فراخ أو لحم صاج محمص + بطاطس فارم فريتس مقرمشة + كانز بيبسي مثلج + ثومية سورية.</p>
+                <div style="display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+                    <div>
+                        <span style="font-size: 1.6rem; font-weight: 800; color: var(--accent);">135 ج.م</span>
+                        <span style="color: var(--text-dim); text-decoration: line-through; margin-right: 8px;">170 ج.م</span>
+                    </div>
+                    <button class="btn-primary" style="padding: 8px 18px; font-size: 0.85rem;" onclick="addQuickOffer('كومبو التوفير الفردي', 135)">أضف للسلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section class="location-section">
+        <div class="location-card">
+            <div class="branch-info">
+                <span style="color: var(--accent); font-weight: 700; font-size: 0.85rem;">فرعنا الرئيسي في القاهرة</span>
+                <h3>تفضل بزيارتنا في عباس العقاد</h3>
+                <div class="branch-meta">
+                    <div class="meta-row">
+                        <span>📍</span>
+                        <span>35 شارع عباس العقاد، الحي الأول، مدينة نصر، القاهرة</span>
+                    </div>
+                    <div class="meta-row">
+                        <span>🕒</span>
+                        <span>مفتوح يومياً من 11:00 صباحاً حتى 03:00 فجراً (التوصيل 24 ساعة)</span>
+                    </div>
+                    <div class="meta-row">
+                        <span>📞</span>
+                        <span>الخط الساخن الموحد: <strong>15250</strong> / موبايل: 01144435111</span>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=30.0571,31.3415" target="_blank" class="btn-secondary">
+                    <span>🗺️</span> فتح في خرائط جوجل
+                </a>
+            </div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 260px; background: #162030; display: flex; align-items: center; justify-content: center; position: relative;">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="فرع مدينة نصر" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.65;">
+                <div style="position: absolute; text-align: center; padding: 20px;">
+                    <div style="font-size: 2rem; margin-bottom: 8px;">📍</div>
+                    <div style="font-weight: 800; font-size: 1.1rem;">مدينة نصر — الحي الأول</div>
+                    <div style="font-size: 0.85rem; color: #cbd5e1;">بجوار كنيسة السيدة العذراء</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Cart Drawer -->
+    <div class="cart-bar" id="cartBar">
+        <div class="cart-summary">
+            <div class="cart-count-badge" id="cartCount">0</div>
+            <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">إجمالي الطلب المقدر:</div>
+                <div class="cart-total-text" id="cartTotal">0 ج.م</div>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="whatsapp-order-btn" onclick="sendWhatsAppOrder()">
+            <span>💬</span> تأكيد الطلب بالواتساب
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 مطعم أبو العز السوري — مدينة نصر. جميع الحقوق محفوظة.</p>
+        <p style="margin-top: 8px; font-size: 0.75rem; color: #64748b;">
+            تم تطوير هذا الموقع ونظام إدارة المحتوى بواسطة وكالة نمو الأعمال (Egypt Business Agency).
+            مربوط بمنصة Pages CMS والنشر السحابي المستقل Vercel.
+        </p>
+    </footer>
+
+    <!-- Client-side dynamic loading & Cart script -->
+    <script>
+        const menuData = [
+            { id: "shw-01", name: "ساندوتش شاورما فراخ سوري سوبر", category: "shawarma", desc: "شاورما فراخ بتتبيلة أبو العز، ثومية سورية فاخرة، مخلل خيار في خبز صاج محمص.", price: 95, orig: 110, badge: "الأكثر طلباً", img: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=80" },
+            { id: "shw-02", name: "ساندوتش شاورما لحم بلدي دبل", category: "shawarma", desc: "شاورما لحم عجل بلدي طازج، طحينة شامية، بقدونس وسماق في خبز صاج مقرمش.", price: 135, orig: 150, badge: "لحم بلدي", img: "https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=600&q=80" },
+            { id: "shw-03", name: "وجبة شاورما عربي دبل ميكس", category: "shawarma", desc: "ساندوتش شاورما مقطع عربي، بطاطس فارم فريتس، ثومية، مخلل مشكل وصوص حار.", price: 180, orig: 200, badge: "وجبة التوفير", img: "https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=600&q=80" },
+            { id: "grl-01", name: "كيلو كباب وكفتة مشكل على الفحم", category: "grills", desc: "مشكل ضاني وكفتة حلبية، يقدم مع أرز بسمتي بالمكسرات، ثومية، وطحينة.", price: 580, orig: 640, badge: "عائلي فاخر", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" },
+            { id: "grl-02", name: "شيش طاووق سوري فاخر", category: "grills", desc: "أوراك دجاج متبلة باللبن والزعتر الجبلي، مشوية على الفحم مع خضار مشوي وأرز.", price: 220, orig: 240, badge: "مشوي فحم", img: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80" },
+            { id: "brs-01", name: "وجبة بروستد 4 قطع مقرمش", category: "broasted", desc: "دجاج مقلي بالخلطة السرية المقرمشة، بطاطس، ثومية، كول سلو، وخبز كيزر.", price: 210, orig: 230, badge: "مقرمش", img: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" },
+            { id: "mnq-01", name: "فتة شاورما فراخ أبو العز بالمكسرات", category: "manaqish", desc: "أرز بسمتي ذهبي، عيش شامي محمص، شاورما وفيرة، ثومية، ولوز محمص.", price: 165, orig: 185, badge: "الأكثر شعبية", img: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=600&q=80" },
+            { id: "app-01", name: "ميكس مقبلات شامية (كبة + سمبوسك)", category: "appetizers", desc: "3 قطع كبة مقلية لحم ومكسرات، 3 قطع سمبوسك جبنة حلوم، ورق عنب بدبس الرمان.", price: 120, orig: 140, badge: "مقبلات", img: "https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=600&q=80" }
+        ];
+
+        let cart = [];
+
+        function renderMenu(items) {
+            const grid = document.getElementById('menuGrid');
+            grid.innerHTML = items.map(item => `
+                <div class="menu-card" data-category="${item.category}">
+                    <div class="card-img-wrap">
+                        ${item.badge ? `<span class="item-badge">${item.badge}</span>` : ''}
+                        <img src="${item.img}" alt="${item.name}" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">${item.name}</h4>
+                        <p class="card-desc">${item.desc}</p>
+                        <div class="card-footer">
+                            <div class="price-wrap">
+                                <span class="price-curr">${item.price} ج.م</span>
+                                ${item.orig ? `<span class="price-orig">${item.orig} ج.م</span>` : ''}
+                            </div>
+                            <button class="add-cart-btn" onclick="addToCart('${item.name}', ${item.price})">
+                                + إضافة للطلب
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCategory(cat, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (cat === 'all') {
+                renderMenu(menuData);
+            } else {
+                renderMenu(menuData.filter(i => i.category === cat));
+            }
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCartUI();
+        }
+
+        function addQuickOffer(title, price) {
+            cart.push({ name: title, price });
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const bar = document.getElementById('cartBar');
+            const count = document.getElementById('cartCount');
+            const total = document.getElementById('cartTotal');
+            
+            if (cart.length > 0) {
+                bar.classList.add('active');
+                count.innerText = cart.length;
+                const sum = cart.reduce((acc, item) => acc + item.price, 0);
+                total.innerText = sum + " ج.م";
+            } else {
+                bar.classList.remove('active');
+            }
+        }
+
+        function sendWhatsAppOrder() {
+            if (cart.length === 0) return;
+            const itemsList = cart.map((i, idx) => `${idx + 1}. ${i.name} (${i.price} ج.م)`).join('%0A');
+            const sum = cart.reduce((acc, item) => acc + item.price, 0);
+            const msg = `مرحبا مطعم أبو العز السوري، أود عمل طلب عبر موقعكم الإلكتروني:%0A%0A${itemsList}%0A%0A*الإجمالي التقريبي: ${sum} جنيه مصري*%0A%0Aالعنوان للتوصيل: `;
+            window.open(`https://wa.me/201144435111?text=${msg}`, '_blank');
+        }
+
+        function openWhatsAppDirect() {
+            window.open('https://wa.me/201144435111?text=مرحبا%20أبو%20العز%20السوري،%20أود%20الاستفسار%20عن%20المنيو%20والتوصيل', '_blank');
+        }
+
+        // Initial render
+        renderMenu(menuData);
+    </script>
+</body>
+</html>
